@@ -14,6 +14,7 @@ app.use(fileUpload());
 
 app.post('/upload', (req, res) => {
     if (req.files === null) {
+        console.log('No file uploaded');
         return res.status(400).json({msg: 'No file uploaded'});
     }
     
